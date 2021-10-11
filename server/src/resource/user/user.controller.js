@@ -6,7 +6,8 @@ async function getAllUsers(req, res) {
 }
 
 async function createUser(req, res) {
-  
+  const newUser = req.body
+  await User.create(req.body)
 }
 
 async function deleteUserById(req, res) {
@@ -15,12 +16,6 @@ async function deleteUserById(req, res) {
 async function updateUserById(req, res) {
   
 }
-
-
-// getAllUsers,
-// createUser,
-// deleteUserById,
-// updateUserById,
 
 module.exports = {
   getAllUsers,
