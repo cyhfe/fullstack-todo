@@ -10,7 +10,11 @@ const app = express()
 
 app.use(express.json())
 
+
+// app.use('/api', protect)
 app.use('/api/user', userRouter)
+
+
 
 async function start(){
   await mongoose.connect(MONGO_URL);
@@ -19,3 +23,4 @@ async function start(){
 }
 
 start()
+
