@@ -1,7 +1,11 @@
+const { application } = require('express')
 const express = require('express')
 const mongoose = require('mongoose')
 
+
+const {login, signup} = require('./utils/auth')
 const userRouter = require('./resource/user/user.router')
+
 
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/todo'
 const PORT = process.env.PORT || 5000
@@ -9,6 +13,10 @@ const PORT = process.env.PORT || 5000
 const app = express()
 
 app.use(express.json())
+
+
+app.post('/login', login)
+app.post('/signup', signup)
 
 
 // app.use('/api', protect)
