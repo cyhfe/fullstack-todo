@@ -3,7 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 
-const {login, signup} = require('./utils/auth')
+const {login, signup, protect, logout} = require('./utils/auth')
 const userRouter = require('./resource/user/user.router')
 
 
@@ -17,11 +17,11 @@ app.use(express.json())
 
 app.post('/login', login)
 app.post('/signup', signup)
+app.post('/logout', logout)
 
 
-// app.use('/api', protect)
+app.use('/api', protect)
 app.use('/api/user', userRouter)
-
 
 
 async function start(){

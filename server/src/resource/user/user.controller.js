@@ -12,11 +12,13 @@ async function getAllUsers(req, res) {
 
 async function getUserById(req, res) {
   try {
-    const users = await User.find({ _id: req.params.id });
-    res.status(200).json(users);
+    const user = await User.findOne({ _id: req.params.id });
+    if (!user) {
+      return res.status(404).send();
+    }
+    res.status(200).json(user);
   } catch (error) {
-    console.error(error);
-    res.status(400).json({ message: error.message });
+    res.status(500).send();
   }
 }
 

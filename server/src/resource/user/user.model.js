@@ -14,6 +14,9 @@ const userSchema = new Schema(
       trim: true,
       required: true,
     },
+    token: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
