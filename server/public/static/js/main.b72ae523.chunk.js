@@ -1,0 +1,2 @@
+(this.webpackJsonpclient=this.webpackJsonpclient||[]).push([[0],{9:function(t,e,n){"use strict";n.r(e);n(1);var c=n(3),i=n.n(c),r=n(0);function s(){return Object(r.jsxs)("div",{children:[Object(r.jsx)("h1",{children:"todo app"}),Object(r.jsx)("button",{children:"Register"}),Object(r.jsx)("button",{children:"Login"})]})}var o=document.getElementById("root");i.a.render(Object(r.jsx)(s,{}),o)}},[[9,1,2]]]);
+//# sourceMappingURL=main.b72ae523.chunk.js.map
