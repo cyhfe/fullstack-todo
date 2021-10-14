@@ -7,7 +7,7 @@ const { login, signup, protect, logout } = require('./utils/auth');
 const userRouter = require('./resource/user/user.router');
 
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost:27017/todo';
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
