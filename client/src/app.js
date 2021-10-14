@@ -1,5 +1,9 @@
-
-
 export default function App() {
-  return <h1>hello wolrd</h1>
+  return (
+    <div>
+      <h1>todo app</h1>
+      <button>Register</button>
+      <button>Login</button>
+    </div>
+  );
 }
